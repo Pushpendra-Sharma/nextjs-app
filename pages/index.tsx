@@ -1,7 +1,9 @@
 import Head from 'next/head';
-import { Introduction, ProgressBar } from '@/components';
 import Image from 'next/image';
+import { ProgressBar } from '@/components';
 import logo from '../public/growth-x-logo-dark.png';
+import { AppProvider } from '@/contexts/app-context';
+import { MainContainer } from '@/containers';
 
 export default function Home() {
   return (
@@ -14,12 +16,14 @@ export default function Home() {
       </Head>
 
       <header className='w-full bg-black'>
-        <ProgressBar value={45} />
+        <ProgressBar value={1} />
         <Image src={logo} alt='growth-x logo' width={96} height={24} />
       </header>
 
       <main className='bg-black text-white'>
-        <Introduction />
+        <AppProvider>
+          <MainContainer />
+        </AppProvider>
       </main>
 
       <footer className='bg-black'></footer>
