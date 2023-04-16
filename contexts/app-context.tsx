@@ -26,9 +26,7 @@ export const AppProvider = ({ children }: AppProviderType) => {
   const [state, dispatch] = useReducer(appReducer, {});
 
   const progress = useMemo(() => {
-    let answeredQuestions = 0;
-    Object.keys(state).forEach(key => answeredQuestions++);
-    return answeredQuestions;
+    return Object.keys(state).length;
   }, [state]);
 
   const contextValue = {
