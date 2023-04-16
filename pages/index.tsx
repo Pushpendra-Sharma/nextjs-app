@@ -16,11 +16,15 @@ export default function Home() {
       </Head>
 
       <header className='w-full bg-black'>
-        <ProgressBar value={1} />
-        <Image src={logo} alt='growth-x logo' width={96} height={24} />
+        <div className='bg-inherit'>
+          <ProgressBar value={1} />
+        </div>
+        <div className='bg-inherit px-4 py-6'>
+          <Image src={logo} alt='growth-x logo' width={96} height={24} />
+        </div>
       </header>
 
-      <main className='bg-black text-white'>
+      <main className='bg-black text-white p-8 min-h-screen'>
         <AppProvider>
           <MainContainer />
         </AppProvider>

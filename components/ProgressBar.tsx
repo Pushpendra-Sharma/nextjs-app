@@ -10,7 +10,7 @@ export function ProgressBar({ value, max = 5 }: ProgressBarProps) {
       value={value}
       title='Progress Bar'
       max={max}
-      className='w-full h-1 mt-0'
+      className='w-full h-1 mt-0 absolute top-0'
     ></progress>
   );
 }
