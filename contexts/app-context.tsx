@@ -1,5 +1,5 @@
 import { createContext, useMemo, useReducer, useState } from 'react';
-import { appReducer } from '@/reducers';
+import { appReducer, initialState } from '@/reducers';
 import { AppContextType, AppProviderType, QuestionStatusType } from '@/types';
 
 export const AppContext = createContext<AppContextType>({
@@ -23,10 +23,15 @@ export const AppProvider = ({ children }: AppProviderType) => {
     next: 1,
   });
 
-  const [state, dispatch] = useReducer(appReducer, {});
+  const [state, dispatch] = useReducer(appReducer, initialState);
 
   const progress = useMemo(() => {
-    return Object.keys(state).length;
+    let count = 0;
+    Object.values(state).forEach(value => {
+      if (value) count++;
+    });
+
+    return count;
   }, [state]);
 
   const contextValue = {
