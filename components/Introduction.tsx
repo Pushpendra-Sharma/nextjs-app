@@ -1,5 +1,3 @@
-import { Button } from './Button';
-
 export function Introduction() {
   return (
     <div className=''>
@@ -17,7 +15,6 @@ export function Introduction() {
         - 15 hours/week for the last 3 weeks
       </p>
       <br />
-      <Button label='I agree' onClick={() => {}} />
     </div>
   );
 }
