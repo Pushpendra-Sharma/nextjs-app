@@ -1,7 +1,7 @@
 import { QuestionDetails } from '@/components';
 import { questions } from '@/utils/constants';
 import { QuestionType } from '@/types';
-import { NameInputContainer } from './';
+import { NameInputContainer, RoleInputContainer } from './';
 
 type Props = {
   type: QuestionType;
@@ -18,6 +18,7 @@ export function QuestionContainer({ type }: Props) {
         isRequired={required}
       />
       {type === 'name' && <NameInputContainer type={type} />}
+      {type === 'role' && <RoleInputContainer type={type} />}
     </>
   );
 }

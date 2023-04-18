@@ -1,4 +1,5 @@
 import { QuestionDetailsType, QuestionType } from '@/types';
+import { SelectOptionsType } from '@/types/misc';
 
 export const questions: Record<QuestionType, QuestionDetailsType> = {
   name: {
@@ -37,3 +38,26 @@ export const questions: Record<QuestionType, QuestionDetailsType> = {
     required: true,
   },
 };
+
+export const roleOptions: SelectOptionsType = [
+  {
+    label: 'Founder or CXO',
+    value: 'Founder or CXO',
+  },
+  {
+    label: 'Product team',
+    value: 'Product team',
+  },
+  {
+    label: 'Marketing team',
+    value: 'Marketing team',
+  },
+  {
+    label: 'VC',
+    value: 'VC',
+  },
+  {
+    label: 'Other',
+    value: 'Other',
+  },
+];
