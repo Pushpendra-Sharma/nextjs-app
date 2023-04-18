@@ -36,7 +36,7 @@ export function NameInputContainer({ type }: Props) {
 
   return (
     <div className='flex flex-col gap-4'>
-      <TextInput value={value} handleChange={handleChange} />
+      <TextInput value={value} handleChange={handleChange} placeholder='Type your answer here...' />
       {error && <Error message='Please fill this in' />}
       <Button label='OK' onClick={handleClick} />
     </div>
