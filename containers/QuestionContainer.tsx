@@ -1,7 +1,11 @@
 import { QuestionDetails } from '@/components';
 import { questions } from '@/utils/constants';
 import { QuestionType } from '@/types';
-import { NameInputContainer, RoleInputContainer } from './';
+import {
+  EmailInputContainer,
+  NameInputContainer,
+  RoleInputContainer,
+} from './';
 
 type Props = {
   type: QuestionType;
@@ -19,6 +23,7 @@ export function QuestionContainer({ type }: Props) {
       />
       {type === 'name' && <NameInputContainer type={type} />}
       {type === 'role' && <RoleInputContainer type={type} />}
+      {type === 'email' && <EmailInputContainer type={type} />}
     </>
   );
 }

@@ -34,7 +34,8 @@ export const questions: Record<QuestionType, QuestionDetailsType> = {
     id: 5,
     type: 'email',
     heading: "What's your email?",
-    description: '',
+    description:
+      "We will keep all our comunications with you through this email. Do check your spam inbox if you can't find our application received email.",
     required: true,
   },
 };
