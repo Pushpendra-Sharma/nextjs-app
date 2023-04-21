@@ -29,4 +29,5 @@ progress {
 
 ::-webkit-progress-value {
   background-color: #0077ff;
+  transition: all 0.5s ease-out;
 }
